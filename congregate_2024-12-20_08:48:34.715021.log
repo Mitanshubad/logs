@@ -1,0 +1,6 @@
+[20 Dec 2024 08:35:38][INFO]|base_migrate.migrate_user_info:138| DRY-RUN: Migrating user info
+[20 Dec 2024 08:35:38][INFO]|migrate_utils.find_user_by_email_comparison_without_id:210| Searching for user email gitlab_admin_e8fd2f@example.com on http://173.28.0.1:8081
+[20 Dec 2024 08:48:34][INFO]|migrate.migrate:75| DRY-RUN: Migrating data from http://gitlab-src:80 (gitlab) to http://173.28.0.1:8081
+[20 Dec 2024 08:48:34][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_user_migration.json
+[20 Dec 2024 08:48:34][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_group_migration.json
+[20 Dec 2024 08:48:34][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_project_migration.json

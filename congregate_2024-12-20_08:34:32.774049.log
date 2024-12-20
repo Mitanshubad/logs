@@ -1,0 +1,63 @@
+[20 Dec 2024 08:25:02][INFO]|list_source.list_data:248| Listing data from gitlab source type - http://gitlab-src:80
+[20 Dec 2024 08:25:02][INFO]|list_source.mongo_init:285| Dropping database collections
+[20 Dec 2024 08:25:02][INFO]|mdbc.drop_collection:72| Dropping projects-gitlab-src:80 collection
+[20 Dec 2024 08:25:02][INFO]|mdbc.drop_collection:72| Dropping groups-gitlab-src:80 collection
+[20 Dec 2024 08:25:02][INFO]|mdbc.drop_collection:72| Dropping users-gitlab-src:80 collection
+[20 Dec 2024 08:25:02][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:25:03][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint users?exclude_internal=true&without_project_bots=true: 1
+[20 Dec 2024 08:25:03][INFO]|api.list_all:254| Retrieved 1 users?exclude_internal=true&without_project_bots=true
+[20 Dec 2024 08:25:04][INFO]|mdbc.dump_collection_to_file:76| Dumping users-gitlab-src:80 collection to /opt/congregate/data/users.json
+[20 Dec 2024 08:25:04][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:25:04][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups: 5
+[20 Dec 2024 08:25:04][INFO]|api.list_all:254| Retrieved 5 groups
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/2/members: 1
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/37/members: 1
+[20 Dec 2024 08:25:05][INFO]|api.list_all:254| Retrieved 1 groups/2/members
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/35/members: 1
+[20 Dec 2024 08:25:05][INFO]|api.list_all:254| Retrieved 1 groups/37/members
+[20 Dec 2024 08:25:05][INFO]|api.list_all:254| Retrieved 1 groups/35/members
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/38/members: 1
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/37/projects?include_subgroups=False&with_shared=False: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/2/projects?include_subgroups=False&with_shared=False: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/2/descendant_groups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/37/descendant_groups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:254| Retrieved 1 groups/38/members
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/2/subgroups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/37/subgroups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/36/members: 1
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/38/projects?include_subgroups=False&with_shared=False: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:254| Retrieved 1 groups/36/members
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/35/projects?include_subgroups=False&with_shared=False: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/38/descendant_groups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/35/descendant_groups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/38/subgroups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/35/subgroups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/36/projects?include_subgroups=False&with_shared=False: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/36/descendant_groups: 0
+[20 Dec 2024 08:25:05][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/36/subgroups: 0
+[20 Dec 2024 08:25:05][INFO]|mdbc.dump_collection_to_file:76| Dumping groups-gitlab-src:80 collection to /opt/congregate/data/groups.json
+[20 Dec 2024 08:25:06][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:25:08][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint projects: 0
+[20 Dec 2024 08:25:08][INFO]|mdbc.dump_collection_to_file:76| Dumping projects-gitlab-src:80 collection to /opt/congregate/data/projects.json
+[20 Dec 2024 08:28:31][INFO]|stage_base.append_member_to_members_list:121| Staging user root (ID: 1)
+[20 Dec 2024 08:28:31][INFO]|stage_groups.append_data:181| Staging group FgRExafgybnfnEWpQDKz (ID: 2) [1/5]
+[20 Dec 2024 08:28:31][INFO]|stage_base.append_member_to_members_list:121| Staging user root (ID: 1)
+[20 Dec 2024 08:28:31][INFO]|stage_groups.append_data:181| Staging group qREIGVnsbTFzlFAMfsNz (ID: 37) [2/5]
+[20 Dec 2024 08:28:31][INFO]|stage_base.append_member_to_members_list:121| Staging user root (ID: 1)
+[20 Dec 2024 08:28:31][INFO]|stage_groups.append_data:181| Staging group KRJjAZjZCDnwWdRaUITW (ID: 38) [3/5]
+[20 Dec 2024 08:28:31][INFO]|stage_base.append_member_to_members_list:121| Staging user root (ID: 1)
+[20 Dec 2024 08:28:31][INFO]|stage_groups.append_data:181| Staging group HYJgiVoacJqzjuqOngqV (ID: 35) [4/5]
+[20 Dec 2024 08:28:31][INFO]|stage_base.append_member_to_members_list:121| Staging user root (ID: 1)
+[20 Dec 2024 08:28:31][INFO]|stage_groups.append_data:181| Staging group xTJfPbQYxyDTYkUdnqme (ID: 36) [5/5]
+[20 Dec 2024 08:28:31][WARNING]|stage_base.list_staged_users_without_public_email:209| Staged users with incorrect (not primary email) or no `public_email` field set (1):
+[
+    {
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "public_email": null
+    }
+]
+[20 Dec 2024 08:28:31][INFO]|stage_base.write_staging_files:82| Written metadata to stage files 'data/staged_*'
+[20 Dec 2024 08:34:32][INFO]|migrate.migrate:75| DRY-RUN: Migrating data from http://gitlab-src:80 (gitlab) to http://173.28.0.1:8081
+[20 Dec 2024 08:34:32][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_user_migration.json
+[20 Dec 2024 08:34:32][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_group_migration.json
+[20 Dec 2024 08:34:32][INFO]|migrate_utils.clean_data:320| Removing /opt/congregate/data/results/dry_run_project_migration.json

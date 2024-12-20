@@ -1,0 +1,8 @@
+[20 Dec 2024 08:25:02][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future
+[20 Dec 2024 08:25:08][INFO]|migrate_utils.add_post_migration_stats:349| Total number of POST/PUT/DELETE requests: 0
+[20 Dec 2024 08:25:08][INFO]|migrate_utils.add_post_migration_stats:351| Total time: 0:00:06.003284
+[20 Dec 2024 08:28:31][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future
+[20 Dec 2024 08:34:30][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future
+[20 Dec 2024 08:48:33][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future
+[20 Dec 2024 08:49:13][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future
+[20 Dec 2024 09:08:53][WARNING]|main.main:364| ssl_verify is set to False. Suppressing downstream SSL warnings. Consider enforcing SSL verification in the future

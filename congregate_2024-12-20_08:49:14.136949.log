@@ -1,0 +1,141 @@
+[20 Dec 2024 08:48:40][INFO]|base_migrate.migrate_user_info:138| DRY-RUN: Migrating user info
+[20 Dec 2024 08:48:40][INFO]|migrate_utils.find_user_by_email_comparison_without_id:210| Searching for user email gitlab_admin_e8fd2f@example.com on http://173.28.0.1:8081
+[20 Dec 2024 08:48:40][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 0
+[20 Dec 2024 08:48:40][INFO]|users.search_for_staged_users:466| Destination users status:
+            Found (0):
+[]
+            Inactive (0):
+[]
+            State mismatch (0):
+[]
+            NOT logged in (0):
+[]
+            W/O identities (0):
+[]
+            NOT found (1):
+{
+    "1": {
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "src_state": "active"
+    }
+}
+            Source 'public_email' NOT set or NOT matching primary (1):
+[
+    "gitlab_admin_e8fd2f@example.com: gitlab_admin_e8fd2f@example.com -> None"
+]
+            Duplicate (0):
+[]
+        
+[20 Dec 2024 08:48:40][INFO]|users.search_for_staged_users:498| Writing FOUND users by 'email' src:dest primary email mapping to /opt/congregate/data/user_mapping_by_email.json
+[20 Dec 2024 08:48:40][INFO]|users.handle_users_not_found:559| Keeping only NOT found users (1/1) in staged users
+[20 Dec 2024 08:48:40][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/staged_users.json
+[20 Dec 2024 08:48:40][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:48:45][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 0
+[20 Dec 2024 08:48:45][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?username=root: 1
+[20 Dec 2024 08:48:45][INFO]|api.list_all:254| Retrieved 1 users?username=root
+[20 Dec 2024 08:48:45][WARNING]|users.build_suffix_username:210| Adding (default) suffix to username to avoid duplication: 'root' -> 'root_migrated'
+[20 Dec 2024 08:48:45][INFO]|base_migrate.handle_user_creation:193| DRY-RUN: Attempting to create user gitlab_admin_e8fd2f@example.com
+[20 Dec 2024 08:48:45][INFO]|base_migrate.migrate_user_info:151| ### DRY-RUN: User creation results ###
+[
+    {
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "id": null
+    },
+    {
+        "Successful": 1,
+        "Total": 1
+    }
+]
+[20 Dec 2024 08:48:45][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/results/user_migration_results_2024-12-20_08:48:45.762973.json
+[20 Dec 2024 08:48:45][INFO]|base_migrate.migrate_user_info:156| DRY-RUN: Outputting various USER migration data to 'dry_run_user_migration.json'
+[20 Dec 2024 08:48:45][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:48:46][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 0
+[20 Dec 2024 08:48:46][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?username=root: 1
+[20 Dec 2024 08:48:46][INFO]|api.list_all:254| Retrieved 1 users?username=root
+[20 Dec 2024 08:48:46][WARNING]|users.build_suffix_username:210| Adding (default) suffix to username to avoid duplication: 'root' -> 'root_migrated'
+[20 Dec 2024 08:48:47][INFO]|migrate.export_import_groups:166| DRY-RUN: Exporting groups
+[20 Dec 2024 08:48:47][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:48:50][INFO]|migrate.handle_exporting_groups:300| DRY-RUN: Exporting group FgRExafgybnfnEWpQDKz (ID: 2) as fgrexafgybnfnewpqdkz.tar.gz
+[20 Dec 2024 08:48:50][INFO]|migrate.handle_exporting_groups:300| DRY-RUN: Exporting group qREIGVnsbTFzlFAMfsNz (ID: 37) as qreigvnsbtfzlfamfsnz.tar.gz
+[20 Dec 2024 08:48:50][INFO]|migrate.handle_exporting_groups:300| DRY-RUN: Exporting group KRJjAZjZCDnwWdRaUITW (ID: 38) as krjjazjzcdnwwdrauitw.tar.gz
+[20 Dec 2024 08:48:50][INFO]|importexport.export_group:712| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:48:50][INFO]|importexport.export_group:712| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:48:50][INFO]|importexport.export_group:712| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:48:50][INFO]|groups.find_group_by_path:206| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:48:50][INFO]|groups.find_group_by_path:206| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:48:50][INFO]|groups.find_group_by_path:206| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:48:50][INFO]|migrate.handle_exporting_groups:300| DRY-RUN: Exporting group HYJgiVoacJqzjuqOngqV (ID: 35) as hyjgivoacjqzjuqongqv.tar.gz
+[20 Dec 2024 08:48:50][INFO]|importexport.export_group:712| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:48:50][INFO]|groups.find_group_by_path:206| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:48:50][INFO]|migrate.handle_exporting_groups:300| DRY-RUN: Exporting group xTJfPbQYxyDTYkUdnqme (ID: 36) as xtjfpbqyxydtykudnqme.tar.gz
+[20 Dec 2024 08:48:50][INFO]|importexport.export_group:712| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:48:50][INFO]|groups.find_group_by_path:206| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:48:51][INFO]|migrate.export_import_groups:183| ### DRY-RUN: Group export results ###
+[
+    {
+        "fgrexafgybnfnewpqdkz.tar.gz": true
+    },
+    {
+        "krjjazjzcdnwwdrauitw.tar.gz": true
+    },
+    {
+        "hyjgivoacjqzjuqongqv.tar.gz": true
+    },
+    {
+        "xtjfpbqyxydtykudnqme.tar.gz": true
+    },
+    {
+        "qreigvnsbtfzlfamfsnz.tar.gz": true
+    },
+    {
+        "Successful": 5,
+        "Total": 5
+    }
+]
+[20 Dec 2024 08:48:51][INFO]|migrate.export_import_groups:193| DRY-RUN: Importing groups
+[20 Dec 2024 08:48:51][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:48:55][INFO]|groups.find_group_by_path:206| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:48:55][INFO]|groups.find_group_by_path:206| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:48:55][INFO]|groups.find_group_by_path:206| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:48:55][INFO]|groups.find_group_by_path:206| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:48:55][INFO]|migrate.handle_importing_groups:339| DRY-RUN: Group KRJjAZjZCDnwWdRaUITW NOT found on destination, importing...
+[20 Dec 2024 08:48:55][INFO]|migrate.handle_importing_groups:339| DRY-RUN: Group HYJgiVoacJqzjuqOngqV NOT found on destination, importing...
+[20 Dec 2024 08:48:55][INFO]|importexport.import_group:431| DRY-RUN: Outputing group KRJjAZjZCDnwWdRaUITW (file: krjjazjzcdnwwdrauitw.tar.gz) migration data to dry_run_group_migration.json
+[20 Dec 2024 08:48:55][INFO]|importexport.import_group:431| DRY-RUN: Outputing group HYJgiVoacJqzjuqOngqV (file: hyjgivoacjqzjuqongqv.tar.gz) migration data to dry_run_group_migration.json
+[20 Dec 2024 08:48:55][INFO]|groups.find_group_by_path:206| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:48:55][INFO]|migrate.handle_importing_groups:339| DRY-RUN: Group qREIGVnsbTFzlFAMfsNz NOT found on destination, importing...
+[20 Dec 2024 08:48:55][INFO]|importexport.import_group:431| DRY-RUN: Outputing group qREIGVnsbTFzlFAMfsNz (file: qreigvnsbtfzlfamfsnz.tar.gz) migration data to dry_run_group_migration.json
+[20 Dec 2024 08:48:55][INFO]|migrate.handle_importing_groups:339| DRY-RUN: Group FgRExafgybnfnEWpQDKz NOT found on destination, importing...
+[20 Dec 2024 08:48:55][INFO]|importexport.import_group:431| DRY-RUN: Outputing group FgRExafgybnfnEWpQDKz (file: fgrexafgybnfnewpqdkz.tar.gz) migration data to dry_run_group_migration.json
+[20 Dec 2024 08:48:55][INFO]|migrate.handle_importing_groups:339| DRY-RUN: Group xTJfPbQYxyDTYkUdnqme NOT found on destination, importing...
+[20 Dec 2024 08:48:55][INFO]|importexport.import_group:431| DRY-RUN: Outputing group xTJfPbQYxyDTYkUdnqme (file: xtjfpbqyxydtykudnqme.tar.gz) migration data to dry_run_group_migration.json
+[20 Dec 2024 08:48:55][INFO]|migrate.export_import_groups:209| ### DRY-RUN: Group import results ###
+[
+    {
+        "HYJgiVoacJqzjuqOngqV": false
+    },
+    {
+        "KRJjAZjZCDnwWdRaUITW": false
+    },
+    {
+        "qREIGVnsbTFzlFAMfsNz": false
+    },
+    {
+        "FgRExafgybnfnEWpQDKz": false
+    },
+    {
+        "xTJfPbQYxyDTYkUdnqme": false
+    },
+    {
+        "Successful": 0,
+        "Total": 5
+    }
+]
+[20 Dec 2024 08:48:55][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/results/group_migration_results_2024-12-20_08:48:55.385993.json
+[20 Dec 2024 08:48:55][WARNING]|migrate.migrate_project_info:497| SKIP: No projects staged for migration
+[20 Dec 2024 08:48:55][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint hooks: 0
+[20 Dec 2024 08:48:55][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint hooks: 0
+[20 Dec 2024 08:48:55][INFO]|migrate_utils.add_post_migration_stats:349| Total number of POST/PUT/DELETE requests: 0
+[20 Dec 2024 08:48:55][INFO]|migrate_utils.add_post_migration_stats:351| Total time: 0:00:25.377814
+[20 Dec 2024 08:48:55][WARNING]|migrate.migrate:168| DRY-RUN: Completed migrating from http://gitlab-src:80 to http://173.28.0.1:8081
+[20 Dec 2024 08:49:14][INFO]|migrate.migrate:75| Migrating data from http://gitlab-src:80 (gitlab) to http://173.28.0.1:8081

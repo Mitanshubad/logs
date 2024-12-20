@@ -1,0 +1,184 @@
+[20 Dec 2024 08:49:16][INFO]|base_migrate.migrate_user_info:138| Migrating user info
+[20 Dec 2024 08:49:16][INFO]|migrate_utils.find_user_by_email_comparison_without_id:210| Searching for user email gitlab_admin_e8fd2f@example.com on http://173.28.0.1:8081
+[20 Dec 2024 08:49:16][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 0
+[20 Dec 2024 08:49:16][INFO]|users.search_for_staged_users:466| Destination users status:
+            Found (0):
+[]
+            Inactive (0):
+[]
+            State mismatch (0):
+[]
+            NOT logged in (0):
+[]
+            W/O identities (0):
+[]
+            NOT found (1):
+{
+    "1": {
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "src_state": "active"
+    }
+}
+            Source 'public_email' NOT set or NOT matching primary (1):
+[
+    "gitlab_admin_e8fd2f@example.com: gitlab_admin_e8fd2f@example.com -> None"
+]
+            Duplicate (0):
+[]
+        
+[20 Dec 2024 08:49:16][INFO]|users.search_for_staged_users:498| Writing FOUND users by 'email' src:dest primary email mapping to /opt/congregate/data/user_mapping_by_email.json
+[20 Dec 2024 08:49:16][INFO]|users.handle_users_not_found:559| Keeping only NOT found users (1/1) in staged users
+[20 Dec 2024 08:49:16][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/staged_users.json
+[20 Dec 2024 08:49:16][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:49:21][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 0
+[20 Dec 2024 08:49:21][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?username=root: 1
+[20 Dec 2024 08:49:21][INFO]|api.list_all:254| Retrieved 1 users?username=root
+[20 Dec 2024 08:49:21][WARNING]|users.build_suffix_username:210| Adding (default) suffix to username to avoid duplication: 'root' -> 'root_migrated'
+[20 Dec 2024 08:49:21][INFO]|base_migrate.handle_user_creation:193| Attempting to create user gitlab_admin_e8fd2f@example.com
+[20 Dec 2024 08:49:22][INFO]|keys.migrate_user_ssh_keys:90| Migrating user 'gitlab_admin_e8fd2f@example.com' SSH keys
+[20 Dec 2024 08:49:22][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint users/1/keys: 0
+[20 Dec 2024 08:49:22][INFO]|keys.migrate_user_gpg_keys:112| Migrating user 'gitlab_admin_e8fd2f@example.com' GPG keys
+[20 Dec 2024 08:49:22][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint users/1/gpg_keys: 0
+[20 Dec 2024 08:49:22][INFO]|base_migrate.migrate_user_info:151| ### User creation results ###
+[
+    {
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "id": 2
+    },
+    {
+        "Successful": 1,
+        "Total": 1
+    }
+]
+[20 Dec 2024 08:49:22][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/results/user_migration_results_2024-12-20_08:49:22.673571.json
+[20 Dec 2024 08:49:22][INFO]|migrate.export_import_groups:166| Exporting groups
+[20 Dec 2024 08:49:22][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:49:26][INFO]|migrate.handle_exporting_groups:300| Exporting group FgRExafgybnfnEWpQDKz (ID: 2) as fgrexafgybnfnewpqdkz.tar.gz
+[20 Dec 2024 08:49:26][INFO]|migrate.handle_exporting_groups:300| Exporting group qREIGVnsbTFzlFAMfsNz (ID: 37) as qreigvnsbtfzlfamfsnz.tar.gz
+[20 Dec 2024 08:49:26][INFO]|migrate.handle_exporting_groups:300| Exporting group KRJjAZjZCDnwWdRaUITW (ID: 38) as krjjazjzcdnwwdrauitw.tar.gz
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:712| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:712| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:712| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:49:26][INFO]|groups.find_group_by_path:206| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:49:26][INFO]|groups.find_group_by_path:206| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:49:26][INFO]|groups.find_group_by_path:206| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:49:26][INFO]|migrate.handle_exporting_groups:300| Exporting group HYJgiVoacJqzjuqOngqV (ID: 35) as hyjgivoacjqzjuqongqv.tar.gz
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:712| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:49:26][INFO]|groups.find_group_by_path:206| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:722| Group KRJjAZjZCDnwWdRaUITW (ID: 38) NOT found on destination.
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:722| Group HYJgiVoacJqzjuqOngqV (ID: 35) NOT found on destination.
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:722| Group FgRExafgybnfnEWpQDKz (ID: 2) NOT found on destination.
+[20 Dec 2024 08:49:26][INFO]|importexport.wait_for_group_download:145| Waited 0/1800.0 seconds for group 2 to export
+[20 Dec 2024 08:49:26][INFO]|importexport.wait_for_group_download:145| Waited 0/1800.0 seconds for group 35 to export
+[20 Dec 2024 08:49:26][INFO]|importexport.export_group:722| Group qREIGVnsbTFzlFAMfsNz (ID: 37) NOT found on destination.
+[20 Dec 2024 08:49:26][INFO]|importexport.wait_for_group_download:145| Waited 0/1800.0 seconds for group 38 to export
+[20 Dec 2024 08:49:26][INFO]|importexport.wait_for_group_download:145| Waited 0/1800.0 seconds for group 37 to export
+[20 Dec 2024 08:49:36][INFO]|importexport.wait_for_group_download:145| Waited 10/1800.0 seconds for group 2 to export
+[20 Dec 2024 08:49:36][INFO]|importexport.wait_for_group_download:145| Waited 10/1800.0 seconds for group 35 to export
+[20 Dec 2024 08:49:36][INFO]|importexport.wait_for_group_download:145| Waited 10/1800.0 seconds for group 38 to export
+[20 Dec 2024 08:49:37][INFO]|importexport.wait_for_group_download:145| Waited 10/1800.0 seconds for group 37 to export
+[20 Dec 2024 08:49:46][INFO]|importexport.wait_for_group_download:145| Waited 20/1800.0 seconds for group 35 to export
+[20 Dec 2024 08:49:46][INFO]|importexport.wait_for_group_download:145| Waited 20/1800.0 seconds for group 2 to export
+[20 Dec 2024 08:49:47][INFO]|importexport.wait_for_group_download:145| Waited 20/1800.0 seconds for group 38 to export
+[20 Dec 2024 08:49:47][INFO]|importexport.wait_for_group_download:145| Waited 20/1800.0 seconds for group 37 to export
+[20 Dec 2024 08:49:56][INFO]|importexport.wait_for_group_download:145| Waited 30/1800.0 seconds for group 35 to export
+[20 Dec 2024 08:49:57][INFO]|importexport.wait_for_group_download:145| Waited 30/1800.0 seconds for group 2 to export
+[20 Dec 2024 08:49:57][INFO]|importexport.wait_for_group_download:145| Waited 30/1800.0 seconds for group 37 to export
+[20 Dec 2024 08:49:57][INFO]|importexport.wait_for_group_download:145| Waited 30/1800.0 seconds for group 38 to export
+[20 Dec 2024 08:50:07][INFO]|importexport.wait_for_group_download:139| Waiting 1.1 minutes to download group 2
+[20 Dec 2024 08:50:07][INFO]|importexport.wait_for_group_download:139| Waiting 1.1 minutes to download group 35
+[20 Dec 2024 08:50:07][INFO]|importexport.wait_for_group_download:139| Waiting 1.1 minutes to download group 37
+[20 Dec 2024 08:50:07][INFO]|importexport.wait_for_group_download:139| Waiting 1.1 minutes to download group 38
+[20 Dec 2024 08:51:13][INFO]|importexport.export_group:732| Downloading group FgRExafgybnfnEWpQDKz (ID: 2) as fgrexafgybnfnewpqdkz.tar.gz
+[20 Dec 2024 08:51:13][INFO]|importexport.export_group:732| Downloading group HYJgiVoacJqzjuqOngqV (ID: 35) as hyjgivoacjqzjuqongqv.tar.gz
+[20 Dec 2024 08:51:13][INFO]|importexport.export_group:732| Downloading group qREIGVnsbTFzlFAMfsNz (ID: 37) as qreigvnsbtfzlfamfsnz.tar.gz
+[20 Dec 2024 08:51:13][INFO]|importexport.export_group:732| Downloading group KRJjAZjZCDnwWdRaUITW (ID: 38) as krjjazjzcdnwwdrauitw.tar.gz
+[20 Dec 2024 08:52:18][INFO]|migrate.handle_exporting_groups:300| Exporting group xTJfPbQYxyDTYkUdnqme (ID: 36) as xtjfpbqyxydtykudnqme.tar.gz
+[20 Dec 2024 08:52:18][INFO]|importexport.export_group:712| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:52:18][INFO]|groups.find_group_by_path:206| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:52:19][INFO]|importexport.export_group:722| Group xTJfPbQYxyDTYkUdnqme (ID: 36) NOT found on destination.
+[20 Dec 2024 08:52:19][INFO]|importexport.wait_for_group_download:145| Waited 0/1800.0 seconds for group 36 to export
+[20 Dec 2024 08:52:29][INFO]|importexport.wait_for_group_download:145| Waited 10/1800.0 seconds for group 36 to export
+[20 Dec 2024 08:52:39][INFO]|importexport.wait_for_group_download:145| Waited 20/1800.0 seconds for group 36 to export
+[20 Dec 2024 08:52:49][INFO]|importexport.wait_for_group_download:145| Waited 30/1800.0 seconds for group 36 to export
+[20 Dec 2024 08:52:59][INFO]|importexport.wait_for_group_download:145| Waited 40/1800.0 seconds for group 36 to export
+[20 Dec 2024 08:53:09][INFO]|importexport.wait_for_group_download:139| Waiting 1.1 minutes to download group 36
+[20 Dec 2024 08:54:15][INFO]|importexport.export_group:732| Downloading group xTJfPbQYxyDTYkUdnqme (ID: 36) as xtjfpbqyxydtykudnqme.tar.gz
+[20 Dec 2024 08:55:30][INFO]|migrate.export_import_groups:183| ### Group export results ###
+[
+    {
+        "krjjazjzcdnwwdrauitw.tar.gz": true
+    },
+    {
+        "qreigvnsbtfzlfamfsnz.tar.gz": true
+    },
+    {
+        "hyjgivoacjqzjuqongqv.tar.gz": true
+    },
+    {
+        "fgrexafgybnfnewpqdkz.tar.gz": true
+    },
+    {
+        "xtjfpbqyxydtykudnqme.tar.gz": true
+    },
+    {
+        "Successful": 5,
+        "Total": 5
+    }
+]
+[20 Dec 2024 08:55:30][INFO]|migrate.export_import_groups:193| Importing groups
+[20 Dec 2024 08:55:30][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 08:55:41][INFO]|groups.find_group_by_path:206| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:55:42][INFO]|groups.find_group_by_path:206| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:55:42][INFO]|groups.find_group_by_path:206| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:55:46][INFO]|groups.find_group_by_path:206| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:56:50][INFO]|migrate.handle_importing_groups:339| Group HYJgiVoacJqzjuqOngqV NOT found on destination, importing...
+[20 Dec 2024 08:56:50][INFO]|importexport.attempt_group_import:444| Importing group HYJgiVoacJqzjuqOngqV from filesystem
+[20 Dec 2024 08:56:50][INFO]|migrate.handle_importing_groups:339| Group FgRExafgybnfnEWpQDKz NOT found on destination, importing...
+[20 Dec 2024 08:56:50][INFO]|importexport.attempt_group_import:444| Importing group FgRExafgybnfnEWpQDKz from filesystem
+[20 Dec 2024 08:56:51][INFO]|migrate.handle_importing_groups:339| Group KRJjAZjZCDnwWdRaUITW NOT found on destination, importing...
+[20 Dec 2024 08:56:51][INFO]|importexport.attempt_group_import:444| Importing group KRJjAZjZCDnwWdRaUITW from filesystem
+[20 Dec 2024 08:56:53][INFO]|migrate.handle_importing_groups:339| Group qREIGVnsbTFzlFAMfsNz NOT found on destination, importing...
+[20 Dec 2024 08:56:53][INFO]|importexport.attempt_group_import:444| Importing group qREIGVnsbTFzlFAMfsNz from filesystem
+[20 Dec 2024 08:56:57][INFO]|importexport.import_group:425| Group FgRExafgybnfnEWpQDKz (file: fgrexafgybnfnewpqdkz.tar.gz) successfully imported
+[20 Dec 2024 08:56:57][INFO]|groups.find_group_by_path:206| Searching on destination for group FgRExafgybnfnEWpQDKz
+[20 Dec 2024 08:56:58][INFO]|groups.find_group_by_path:219| Group FgRExafgybnfnEWpQDKz exists (group search)
+[20 Dec 2024 08:56:58][INFO]|importexport.wait_for_group_import:176| Group FgRExafgybnfnEWpQDKz imported successfully with ID 4
+[20 Dec 2024 08:56:59][INFO]|importexport.import_group:425| Group KRJjAZjZCDnwWdRaUITW (file: krjjazjzcdnwwdrauitw.tar.gz) successfully imported
+[20 Dec 2024 08:56:59][INFO]|groups.find_group_by_path:206| Searching on destination for group KRJjAZjZCDnwWdRaUITW
+[20 Dec 2024 08:56:59][INFO]|importexport.import_group:425| Group HYJgiVoacJqzjuqOngqV (file: hyjgivoacjqzjuqongqv.tar.gz) successfully imported
+[20 Dec 2024 08:56:59][INFO]|groups.find_group_by_path:206| Searching on destination for group HYJgiVoacJqzjuqOngqV
+[20 Dec 2024 08:56:59][INFO]|groups.find_group_by_path:219| Group HYJgiVoacJqzjuqOngqV exists (group search)
+[20 Dec 2024 08:56:59][INFO]|importexport.wait_for_group_import:176| Group HYJgiVoacJqzjuqOngqV imported successfully with ID 3
+[20 Dec 2024 08:56:59][INFO]|groups.find_group_by_path:219| Group KRJjAZjZCDnwWdRaUITW exists (group search)
+[20 Dec 2024 08:56:59][INFO]|importexport.wait_for_group_import:176| Group KRJjAZjZCDnwWdRaUITW imported successfully with ID 5
+[20 Dec 2024 08:56:59][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/2/variables: 0
+[20 Dec 2024 08:56:59][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/35/variables: 0
+[20 Dec 2024 08:56:59][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/38/variables: 0
+[20 Dec 2024 08:57:57][ERROR]|migrate.handle_importing_groups:359| Incorrect configuration found in import_user_id (Response - None)
+[20 Dec 2024 08:57:58][ERROR]|migrate.handle_importing_groups:360| None
+[20 Dec 2024 08:57:58][INFO]|groups.find_group_by_path:206| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:58:12][WARNING]|importexport.import_group:419| Re-importing group qREIGVnsbTFzlFAMfsNz in 10 seconds due to:
+{"message":"500 Internal Server Error"}
+[20 Dec 2024 08:58:16][INFO]|base_migrate.remove_import_user:367| Removing import user (ID: 1) from group (ID: 4)
+[20 Dec 2024 08:58:22][INFO]|importexport.attempt_group_import:444| Importing group qREIGVnsbTFzlFAMfsNz from filesystem
+[20 Dec 2024 08:58:42][INFO]|migrate.handle_importing_groups:339| Group xTJfPbQYxyDTYkUdnqme NOT found on destination, importing...
+[20 Dec 2024 08:58:42][INFO]|importexport.attempt_group_import:444| Importing group xTJfPbQYxyDTYkUdnqme from filesystem
+[20 Dec 2024 08:58:43][ERROR]|base_migrate.remove_import_user:377| Failed to remove import user (ID: 1) from group (ID: 4):
+<Response [403]>
+[20 Dec 2024 08:58:43][INFO]|base_migrate.remove_import_user:367| Removing import user (ID: 1) from group (ID: 3)
+[20 Dec 2024 08:58:44][ERROR]|base_migrate.remove_import_user:377| Failed to remove import user (ID: 1) from group (ID: 3):
+<Response [403]>
+[20 Dec 2024 08:58:45][INFO]|importexport.import_group:425| Group qREIGVnsbTFzlFAMfsNz (file: qreigvnsbtfzlfamfsnz.tar.gz) successfully imported
+[20 Dec 2024 08:58:45][INFO]|groups.find_group_by_path:206| Searching on destination for group qREIGVnsbTFzlFAMfsNz
+[20 Dec 2024 08:58:45][INFO]|groups.find_group_by_path:219| Group qREIGVnsbTFzlFAMfsNz exists (group search)
+[20 Dec 2024 08:58:45][INFO]|importexport.wait_for_group_import:176| Group qREIGVnsbTFzlFAMfsNz imported successfully with ID 7
+[20 Dec 2024 08:58:46][INFO]|importexport.import_group:425| Group xTJfPbQYxyDTYkUdnqme (file: xtjfpbqyxydtykudnqme.tar.gz) successfully imported
+[20 Dec 2024 08:58:46][INFO]|groups.find_group_by_path:206| Searching on destination for group xTJfPbQYxyDTYkUdnqme
+[20 Dec 2024 08:58:51][INFO]|groups.find_group_by_path:219| Group xTJfPbQYxyDTYkUdnqme exists (group search)
+[20 Dec 2024 08:58:51][INFO]|importexport.wait_for_group_import:176| Group xTJfPbQYxyDTYkUdnqme imported successfully with ID 8
+[20 Dec 2024 08:58:55][INFO]|api.list_all:236| Total count for http://gitlab-src:80 endpoint groups/36/variables: 0
+[20 Dec 2024 08:58:56][INFO]|base_migrate.remove_import_user:367| Removing import user (ID: 1) from group (ID: 8)
+[20 Dec 2024 08:58:56][ERROR]|base_migrate.remove_import_user:377| Failed to remove import user (ID: 1) from group (ID: 8):
+<Response [403]>
+[20 Dec 2024 09:08:54][INFO]|migrate.migrate:75| Migrating data from http://gitlab-src:80 (gitlab) to http://173.28.0.1:8081

@@ -1,0 +1,46 @@
+[20 Dec 2024 09:08:58][INFO]|base_migrate.migrate_user_info:138| Migrating user info
+[20 Dec 2024 09:08:58][INFO]|migrate_utils.find_user_by_email_comparison_without_id:210| Searching for user email gitlab_admin_e8fd2f@example.com on http://173.28.0.1:8081
+[20 Dec 2024 09:08:58][INFO]|api.list_all:236| Total count for http://173.28.0.1:8081 endpoint users?search=gitlab_admin_e8fd2f%40example.com: 1
+[20 Dec 2024 09:08:58][INFO]|api.list_all:254| Retrieved 1 users?search=gitlab_admin_e8fd2f%40example.com
+[20 Dec 2024 09:08:58][INFO]|migrate_utils.find_user_by_email_comparison_without_id:221| Found user by matching primary email gitlab_admin_e8fd2f@example.com
+[20 Dec 2024 09:08:58][INFO]|users.search_for_staged_users:466| Destination users status:
+            Found (1):
+[
+    {
+        "dest_state": "active",
+        "email": "gitlab_admin_e8fd2f@example.com",
+        "id": 2,
+        "identities": [],
+        "last_sign_in_at": null,
+        "src_state": "active",
+        "username": "root_migrated"
+    }
+]
+            Inactive (0):
+[]
+            State mismatch (0):
+[]
+            NOT logged in (1):
+[
+    "gitlab_admin_e8fd2f@example.com - active"
+]
+            W/O identities (1):
+[
+    "gitlab_admin_e8fd2f@example.com - active"
+]
+            NOT found (0):
+{}
+            Source 'public_email' NOT set or NOT matching primary (1):
+[
+    "gitlab_admin_e8fd2f@example.com: gitlab_admin_e8fd2f@example.com -> None"
+]
+            Duplicate (0):
+[]
+        
+[20 Dec 2024 09:08:58][INFO]|users.search_for_staged_users:498| Writing FOUND users by 'email' src:dest primary email mapping to /opt/congregate/data/user_mapping_by_email.json
+[20 Dec 2024 09:08:58][INFO]|users.handle_users_not_found:559| Keeping only NOT found users (0/1) in staged users
+[20 Dec 2024 09:08:58][INFO]|json_utils.write_json_to_file:12| ### Writing output to /opt/congregate/data/staged_users.json
+[20 Dec 2024 09:08:58][INFO]|processes.get_no_of_processes:182| Running command with 4 parallel processes on 16 CPU
+[20 Dec 2024 09:09:02][WARNING]|base_migrate.are_results:128| Results from user creation returned as empty. Aborting.
+[20 Dec 2024 09:09:02][INFO]|migrate_utils.add_post_migration_stats:349| Total number of POST/PUT/DELETE requests: 0
+[20 Dec 2024 09:09:02][INFO]|migrate_utils.add_post_migration_stats:351| Total time: 0:00:13.154387
